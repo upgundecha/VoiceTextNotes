@@ -1,0 +1,27 @@
+name: Swift Lint and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up SwiftLint
+      run: brew install swiftlint
+
+    - name: Run SwiftLint
+      run: swiftlint
+
+    - name: Build
+      run: xcodebuild clean build -project VoiceTextNotes.xcodeproj -scheme VoiceTextNotes
+
+    - name: Test
+      run: xcodebuild test -project VoiceTextNotes.xcodeproj -scheme VoiceTextNotes

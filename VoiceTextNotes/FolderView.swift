@@ -40,11 +40,21 @@ struct FolderView: View {
         }
         .navigationTitle(folder.name)
         .toolbar {
-            Button("Add Note") {
+            Button(action: {
                 showingAddNote = true
+            }) {
+                HStack {
+                    Image(systemName: "plus")
+                    Text("Add Note")
+                }
             }
-            Button("Play All") {
-               playAllVoiceMemos()
+            Button(action: {
+                playAllVoiceMemos()
+            }) {
+                HStack {
+                    Image(systemName: "play.fill")
+                    Text("Play All")
+                }
             }
         }
         .sheet(isPresented: $showingAddNote) {

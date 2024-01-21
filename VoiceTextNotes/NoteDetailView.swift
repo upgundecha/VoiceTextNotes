@@ -33,21 +33,32 @@ struct NoteDetailView: View {
                     }
                 }
 
-                HStack {
-                    Text(note.textContent)
-                        .lineLimit(nil)
+                if !note.textContent.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    HStack {
+                        Text(note.textContent)
+                            .lineLimit(nil)
+                            .padding(.vertical, 2) // Add vertical padding for the highlight effect
+                            .padding(.horizontal, 5) // Add horizontal padding for the highlight effect
+                            .background(Color.yellow.opacity(0.5)) // Semi-transparent yellow background
+                            .cornerRadius(3) // Slightly rounded corners to mimic a highlighter's stroke
+                    }
                 }
-                HStack {
-                    Text("Tags:")
-                        .bold()
-                    Spacer()
-                    ForEach(note.tags, id: \.self) { tag in
-                        Text(tag)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 5)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                
+                let nonEmptyTags = note.tags.filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+
+                if !nonEmptyTags.isEmpty {
+                    HStack {
+                        Text("Tags:")
+                            .bold()
+                        Spacer()
+                        ForEach(nonEmptyTags, id: \.self) { tag in
+                            Text(tag)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
                     }
                 }
             }

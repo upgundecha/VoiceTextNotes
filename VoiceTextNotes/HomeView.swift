@@ -25,7 +25,10 @@ struct HomeView: View {
             .navigationTitle("Folders")
             .toolbar {
                 Button(action: { showingAddFolder = true }) {
-                    Image(systemName: "plus")
+                    HStack {
+                        Image(systemName: "plus")
+                        Text("Add Folder")
+                    }
                 }
             }
             .sheet(isPresented: $showingAddFolder) {
