@@ -14,6 +14,13 @@
 		85E71CD32B5CF85C009B4245 /* VoiceTextNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CD22B5CF85C009B4245 /* VoiceTextNotesTests.swift */; };
 		85E71CDD2B5CF85C009B4245 /* VoiceTextNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CDC2B5CF85C009B4245 /* VoiceTextNotesUITests.swift */; };
 		85E71CDF2B5CF85C009B4245 /* VoiceTextNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CDE2B5CF85C009B4245 /* VoiceTextNotesUITestsLaunchTests.swift */; };
+		85E71CEC2B5CF897009B4245 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CEB2B5CF897009B4245 /* Folder.swift */; };
+		85E71CF02B5CF93B009B4245 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CEF2B5CF93B009B4245 /* HomeView.swift */; };
+		85E71CF22B5CF968009B4245 /* AddFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CF12B5CF968009B4245 /* AddFolderView.swift */; };
+		85E71CF62B5CFDB3009B4245 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CF52B5CFDB3009B4245 /* AddNoteView.swift */; };
+		85E71CF82B5CFDF4009B4245 /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CF72B5CFDF4009B4245 /* FolderView.swift */; };
+		85E71CFA2B5CFF37009B4245 /* FoldersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CF92B5CFF37009B4245 /* FoldersViewModel.swift */; };
+		85E71CFC2B5D012E009B4245 /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E71CFB2B5D012E009B4245 /* NoteDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		85E71CD82B5CF85C009B4245 /* VoiceTextNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTextNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E71CDC2B5CF85C009B4245 /* VoiceTextNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTextNotesUITests.swift; sourceTree = "<group>"; };
 		85E71CDE2B5CF85C009B4245 /* VoiceTextNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTextNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85E71CEB2B5CF897009B4245 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		85E71CEF2B5CF93B009B4245 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		85E71CF12B5CF968009B4245 /* AddFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFolderView.swift; sourceTree = "<group>"; };
+		85E71CF52B5CFDB3009B4245 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		85E71CF72B5CFDF4009B4245 /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
+		85E71CF92B5CFF37009B4245 /* FoldersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewModel.swift; sourceTree = "<group>"; };
+		85E71CFB2B5D012E009B4245 /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,13 @@
 				85E71CC32B5CF85A009B4245 /* ContentView.swift */,
 				85E71CC52B5CF85C009B4245 /* Assets.xcassets */,
 				85E71CC72B5CF85C009B4245 /* Preview Content */,
+				85E71CEB2B5CF897009B4245 /* Folder.swift */,
+				85E71CEF2B5CF93B009B4245 /* HomeView.swift */,
+				85E71CF12B5CF968009B4245 /* AddFolderView.swift */,
+				85E71CF52B5CFDB3009B4245 /* AddNoteView.swift */,
+				85E71CF72B5CFDF4009B4245 /* FolderView.swift */,
+				85E71CF92B5CFF37009B4245 /* FoldersViewModel.swift */,
+				85E71CFB2B5D012E009B4245 /* NoteDetailView.swift */,
 			);
 			path = VoiceTextNotes;
 			sourceTree = "<group>";
@@ -257,8 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E71CFC2B5D012E009B4245 /* NoteDetailView.swift in Sources */,
+				85E71CF22B5CF968009B4245 /* AddFolderView.swift in Sources */,
 				85E71CC42B5CF85A009B4245 /* ContentView.swift in Sources */,
+				85E71CF82B5CFDF4009B4245 /* FolderView.swift in Sources */,
+				85E71CF02B5CF93B009B4245 /* HomeView.swift in Sources */,
+				85E71CFA2B5CFF37009B4245 /* FoldersViewModel.swift in Sources */,
 				85E71CC22B5CF85A009B4245 /* VoiceTextNotesApp.swift in Sources */,
+				85E71CEC2B5CF897009B4245 /* Folder.swift in Sources */,
+				85E71CF62B5CFDB3009B4245 /* AddNoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,10 +375,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to record voice memos.";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -404,10 +434,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to record voice memos.";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
