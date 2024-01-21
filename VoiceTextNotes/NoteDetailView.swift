@@ -34,18 +34,21 @@ struct NoteDetailView: View {
                 }
 
                 HStack {
-                    Text("Text Content:")
-                        .bold()
-                    Spacer()
                     Text(note.textContent)
                         .lineLimit(nil)
                 }
-
                 HStack {
                     Text("Tags:")
                         .bold()
                     Spacer()
-                    Text(note.tags.joined(separator: ", "))
+                    ForEach(note.tags, id: \.self) { tag in
+                        Text(tag)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
                 }
             }
         }

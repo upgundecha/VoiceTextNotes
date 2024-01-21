@@ -21,11 +21,25 @@ struct AddNoteView: View {
     var body: some View {
         Form {
             TextField("Title", text: $noteTitle)
-            TextField("Note", text: $noteText)
+            ZStack(alignment: .leading) {
+                TextEditor(text: $noteText)
+                if noteText.isEmpty {
+                    Text("Type note here...").foregroundColor(.gray)
+                }
+            }
             TextField("Tags (comma separated)", text: $tags)
             
-            Button(recording ? "Stop Recording" : "Record Voice Memo") {
+            // Button(recording ? "Stop Recording" : "Record Voice Memo") {
+            //     recording ? stopRecording() : startRecording()
+            // }
+
+            Button(action: {
                 recording ? stopRecording() : startRecording()
+            }) {
+                HStack {
+                    Image(systemName: recording ? "stop.fill" : "mic.fill")
+                    Text(recording ? "Stop Recording" : "Record Voice Memo")
+                }
             }
 
             Button("Save Note") {
